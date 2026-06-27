@@ -6,16 +6,15 @@ data.chars = " " +            // space
              "hvg-yxkz.b" +   // bottom row
              ";?:" +          // shifted punctuation
              "’" +            // 1dk space
-             "êîèûéùà·" +     // 1dk home row
-             "µô_œ¨çŭâ" +     // 1dk top row
-             "ñ—ßæ…" +        // 1dk bottom row
-             "•¿" +           // 1dk shifted
+             "êîèéùà·" +     // 1dk home row
+             "µô_œöç" +     // 1dk top row
+             "…" +        // 1dk bottom row
+             "•" +           // 1dk shifted
              "{()}=\\+-/\"" + // altgr home row
-             "@<>$%^&*'`" +   // altgr top row
+             "@<>$€%^&*'`" +   // altgr top row
              "~[]_#|!;:?" +   // altgr bottom row
              "⁽⁾≠±—÷" +       // shifted altgr home row
-             "≤≥‰×" +         // shifted altgr top row
-             "–¦¬";           // shifted altgr bottom row
+             "≤≥×" +         // shifted altgr top row
 
 data.consecutive = 10;
 data.word_length = 7;
