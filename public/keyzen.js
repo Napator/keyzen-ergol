@@ -28,7 +28,7 @@ $(document).ready(function() {
     else {
         set_level(1);
     }
-    $(document).keypress(keyHandler);
+    $(document).keydown(keyHandler);
 });
 
 
