@@ -7,7 +7,7 @@ data.chars = " " +            // space
              ";?:" +          // shifted punctuation
              "’" +            // 1dk space
              "êîèéùà·" +     // 1dk home row
-             "µμô_œöç" +     // 1dk top row (micro sign U+00B5 + greek mu U+03BC)
+             "μô_œöç" +     // 1dk top row (micro sign U+00B5 + greek mu U+03BC)
              "…" +        // 1dk bottom row
              "•" +           // 1dk shifted
              "{()}=\\+-/\"" + // altgr home row
