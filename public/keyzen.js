@@ -13,8 +13,8 @@ data.chars = " " +            // space
              "{()}=\\+-/\"" + // altgr home row
              "@<>$€%^&*'`" +   // altgr top row
              "~[]_#|!;:?" +   // altgr bottom row
-             "⁽⁾≠±—÷" +       // shifted altgr home row
-             "≤≥×" +         // shifted altgr top row
+             "≠±—÷" +       // shifted altgr home row
+             "≤≥×"        // shifted altgr top row
 
 data.consecutive = 10;
 data.word_length = 7;
