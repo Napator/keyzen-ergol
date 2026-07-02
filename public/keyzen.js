@@ -7,14 +7,14 @@ data.chars = " " +            // space
              ";?:" +          // shifted punctuation
              "’" +            // 1dk space
              "êîèéùà·" +     // 1dk home row
-             "µô_œöç" +     // 1dk top row
+             "µμô_œöç" +     // 1dk top row (micro sign U+00B5 + greek mu U+03BC)
              "…" +        // 1dk bottom row
              "•" +           // 1dk shifted
              "{()}=\\+-/\"" + // altgr home row
              "@<>$€%^&*'`" +   // altgr top row
              "~[]_#|!;:?" +   // altgr bottom row
-             "≠±—÷" +       // shifted altgr home row
-             "≤≥×"        // shifted altgr top row
+             "⁽⁾≠±—÷" +       // shifted altgr home row
+             "≤≥×";         // shifted altgr top row
 
 data.consecutive = 10;
 data.word_length = 7;
@@ -49,7 +49,12 @@ function set_level(l) {
 
 
 function keyHandler(e) {
-    var key = String.fromCharCode(e.which);
+    // Prefer e.key (handles Unicode & IME), fallback to old approach for older browsers
+    var key = (typeof e.key === 'string' && e.key.length > 0) ? e.key : String.fromCharCode(e.which);
+    // Only handle single-character printable keys
+    if (key.length !== 1) {
+        return;
+    }
     if (data.chars.indexOf(key) > -1){
         e.preventDefault();
     }
@@ -111,13 +116,13 @@ function render_level() {
     var training_chars = get_training_chars();
     for (var c in data.chars) {
         if(training_chars.indexOf(data.chars[c]) != -1) {
-            chars += "<span style='color: #F00' onclick='set_level(" + c + ");'>"
+            chars += "<span style='color: #F00' onclick='set_level(" + c + ");>"
         }
         else if (level_chars.indexOf(data.chars[c]) != -1) {
-            chars += "<span style='color: #000' onclick='set_level(" + c + ");'>"
+            chars += "<span style='color: #000' onclick='set_level(" + c + ");>"
         }
         else {
-            chars += "<span style='color: #AAA' onclick='set_level(" + c + ");'>"
+            chars += "<span style='color: #AAA' onclick='set_level(" + c + ");>"
         }
         if (data.chars[c] == ' ') {
             chars += "&#9141;";
